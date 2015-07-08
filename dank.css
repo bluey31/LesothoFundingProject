@@ -5,6 +5,13 @@ body {
 	position:relative;
     background-color: #000000;
 }
+#map-canvas { 
+    height: 250px; 
+    margin-left: -40px; 
+    padding: 0px; 
+    width: 108%;
+}
+
 .centeralign{text-align: center;}
 .notfooterwrapper {}
 .padding {
@@ -86,4 +93,15 @@ margin-top: 20px;}
     height: 50px;
     width: 100%;
     left: 0px;
+}
+
+.progress {
+    background: rgba(245, 245, 245, 1); 
+    border: 0px solid rgba(255, 255, 255, 1); 
+    border-radius: 2px; 
+    height: 70px;
+
+}
+.progress-bar-custom {
+    background: rgba(37, 120, 245, 1);
 }
