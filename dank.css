@@ -6,9 +6,9 @@ body {
     background-color: #000000;
 }
 #map-canvas { 
-    height: 40%; 
+    height: 100%; 
     padding: 0px; 
-    width: 48%;
+    width: 100%;
 }
 table{}
 td{}

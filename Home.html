@@ -18,6 +18,9 @@
 <!-- Uses a transparent header that draws on top of the layout's background -->
 <style>
 <!-- BOOOTSTRAP STUFF IDEK-->
+.table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+padding: 1px;
+}
     @-webkit-keyframes progress-bar-stripes {
     from {
         background-position: 40px 0
@@ -233,43 +236,36 @@
 
         <div class="textinsidebox">
             This portal allows users to see the students from Lesotho's (school name) progress from their funding trip from Lesotho to the UK.<br><br>
-<table style="width:100%">
-  <tr>
-    <td>
-      map goes here
-      </td>
-    <td>
-      progress goes here
-      </td>
-    </tr>
-</table>
-            <!--Map-->
-            <div id="map-canvas"></div>
-            <!--End Map-->
 
-            <!--Progress Bar-->
-            <form data-ng-controller="progressCtrl">
-                <!-- Numeric Textfield -->
+            <div class="container">        
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Map</th>
+                            <th>Progress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td width="350px" height="250px">
+                                <!--Map--><div id="map-canvas" style="width:100%; height:100%"></div><!--End Map-->
+                            </td>
+                            <td>
+                                <div class="mdl-textfield mdl-js-textfield textfield-demo" data-ng-controller="progressCtrl">
+                                    <input class="mdl-textfield__input" type="text" class="form-control" data-ng-model="progress" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+                                    <label class="mdl-textfield__label" for="sample2">Number...</label>
+                                    <span class="mdl-textfield__error">Input is not a number!</span>
+                                </div>
 
-  <div class="mdl-textfield mdl-js-textfield textfield-demo">
-    <input class="mdl-textfield__input" type="text" class="form-control" data-ng-model="progress" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
-    <label class="mdl-textfield__label" for="sample2">Number...</label>
-    <span class="mdl-textfield__error">Input is not a number!</span>
-  </div>
-
-
-               <!-- <input type="text" class="form-control" data-ng-model="progress">
-                <!-- Simple Textfield -->
-
-
-                <div class="progress">
-                <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
-                    <span class="sr-only">{{progress}}% Complete</span>
-                </div>
+                                <div class="progress" data-ng-controller="progressCtrl">
+                                    <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+                                    <span class="sr-only">{{progress}}% Complete</span>
+                                </div>
+                            </div></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            </form>
-            <!--End progress bar-->
-
             </div>
             </div>
         </div>
