@@ -251,16 +251,18 @@ padding: 1px;
                                 <!--Map--><div id="map-canvas" style="width:100%; height:100%"></div><!--End Map-->
                             </td>
                             <td>
-                                <div class="mdl-textfield mdl-js-textfield textfield-demo" data-ng-controller="progressCtrl">
+                                <form data-ng-controller="progressCtrl">
+                                <div class="mdl-textfield mdl-js-textfield textfield-demo">
                                     <input class="mdl-textfield__input" type="text" class="form-control" data-ng-model="progress" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
                                     <label class="mdl-textfield__label" for="sample2">Number...</label>
                                     <span class="mdl-textfield__error">Input is not a number!</span>
                                 </div>
 
-                                <div class="progress" data-ng-controller="progressCtrl">
+                                <div class="progress">
                                     <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
                                     <span class="sr-only">{{progress}}% Complete</span>
                                 </div>
+                            </form>
                             </div></td>
                         </tr>
                     </tbody>
