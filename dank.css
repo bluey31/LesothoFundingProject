@@ -6,12 +6,12 @@ body {
     background-color: #000000;
 }
 #map-canvas { 
-    height: 250px; 
-    margin-left: -40px; 
+    height: 40%; 
     padding: 0px; 
-    width: 108%;
+    width: 48%;
 }
-
+table{}
+td{}
 .centeralign{text-align: center;}
 .notfooterwrapper {}
 .padding {
