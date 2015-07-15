@@ -7,8 +7,10 @@ body {
     background-color: #000000;
     color: #333333;
 }
-.mapdiv{background-image: url(./assets/map.jpg);
-    background-size: cover;
+.mapdiv{background-image: url(./assets/world%20in%20color%20and%20outline.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    margin-bottom: 10px;
 }
 .mapfillerleft{width: 40%;}
 #map-canvas { 
