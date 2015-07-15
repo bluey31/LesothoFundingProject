@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
@@ -136,14 +136,6 @@
         background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
     }
     
-    .table-responsive {
-        overflow-x: auto;
-    }
-    
-    .container {
-        min-width: 2000px;
-    }
-    
     <!--BOOSTRAP ENDS--> .mdl-layout__drawer {
         overflow: hidden;
     }
@@ -230,8 +222,8 @@
 
 
             </div>
-            <a class="mdl-navigation__link" href="About.html">About</a>
-            <!--</span>-->
+            <a class="mdl-navigation__link" href="home.html">Home</a>
+           
         </nav>
     </div>
     <main class="mdl-layout__content">
@@ -243,110 +235,132 @@
                     <div class="textshadowtest">
                         <div class="internaltitle">
                             <div class="centeralign">
-                                Lesotho - Reading
+                                About this project
                             </div>
                         </div>
                     </div>
 
                     <div class="textinsidebox">
-                        This portal allows users to see the students from Lesotho's (school name) progress from their funding trip from Lesotho to the UK.
-                        <br>
-                        <br>
-                        <div class="container-fluid">      
-  <div class="row">
-    <div class="col-sm-8">
-    <div class="mapdiv" style="width: 100%; height: 30vw; max-width: 600px;">
-        <br><br><br><br><br>
-        </div>
-    </div>
-      
-    <div class="col-sm-4 " style="background-color:lavenderblush; min-width:30%;">
-        <p><i>Info goes here</i></p><br><br><br><br><br>
-    </div>
+                   <!--     <table>
+                        <td>
+                      
+<style>
+  .demo-card-imageermal.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('assets/ermal.jpg') center / cover;
+  }
+  .demo-card-image > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .demo-card-image__filename {
+    color: #fff;
+  }
+</style>
+
+<div class="mdl-card mdl-shadow--2dp demo-card-imageermal">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Ermal Laci</span>
   </div>
 </div>
-                        <!--<div class="table-responsive ">
-                            
-                            <table class="table " style="width: 100%;height: 50%; ">
-                                <thead>
-                                    <div class="row ">
-  <div class="col-md-6 ">.col-md-6</div>
-  <div class="col-md-6 ">.col-md-6</div>
+
+                        </td>
+                        <td>
+                            <style>
+  .demo-card-imagebrendon.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('assets/brendon.jpg') center / cover;
+  }
+  .demo-card-image > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .demo-card-image__filename {
+    color: #fff;
+  }
+</style>
+
+<div class="mdl-card mdl-shadow--2dp demo-card-imagebrendon">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Brendon Warwick</span>
+  </div>
 </div>
-                                    
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td width="75% ">
-                                            <!--Map
-                                            <div id="map-canvas " style="width:100%; height:100% "></div>
-                                            <!--End Map
-                                            <img src="./assets/map.jpg ">
-                                            
-                                        </td>
-                                        <td style="max-width: 50px; ">
-                                            <div class="widthpadding ">
-                                               <div class="internaltitle ">                                       
-                                                     Progress
-                                                    
-                                                   
-                                               </div>
-                                                <form data-ng-controller="progressCtrl ">
-                                                    <div class="mdl-textfield mdl-js-textfield textfield-demo ">
-                                                        <input class="mdl-textfield__input " type="text " class="form-control " data-ng-model="progress " pattern="-?[0-9]*(\.[0-9]+)? " id="sample2 " />
-                                                        <label class="mdl-textfield__label " for="sample2 ">Number...</label>
-                                                        <span class="mdl-textfield__error ">Input is not a number!</span>
-                                                    </div>
-                                                    <div class="progress ">
-                                                        <div class="progress-bar progress-bar-custom " role="progressbar " aria-valuenow="{{progress}} " aria-valuemin="0 " aria-valuemax="100 " style="width: {{progress}}%; ">
-                                                            <span class="sr-only "><br><br>{{progress}}% Complete</span>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="padding ">
-                                           <i>more info can be placed here</i>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="padding ">
-                                <div class="eventtitle ">
-                                            Event 1:
-                                            </div>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                <div class="eventtitle ">
-                                            Event 2:
-                                            </div>
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-                                
-                                
-                                    <div class="eventtitle ">
-                                        
-                                            Event 3:
-                                    
-                                </div>
-                                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-                            </div>
-                        </div>-->
+                            </td></table>
+                        <table>
+                        <td>
+                           
+<style>
+  .demo-card-imagematt.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('assets/matt.jpg') center / cover;
+  }
+  .demo-card-image > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .demo-card-image__filename {
+    color: #fff;
+  }
+</style>
+
+<div class="mdl-card mdl-shadow--2dp demo-card-imagematt">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Matthew Barlow</span>
+  </div>
+</div>
+
+                        </td>
+                        <td>
+                            <style>
+  .demo-card-imagesumedh.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: url('assets/sumedh.jpg') center / cover;
+  }
+  .demo-card-image > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .demo-card-image__filename {
+    color: #fff;
+  }
+</style>
+
+<div class="mdl-card mdl-shadow--2dp demo-card-imagesumedh">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Sumedh Nimkar</span>
+  </div>
+</div>
+                            </td></table>-->
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer ">
-            <div class="mdl-mini-footer--left-section ">
-                <ul class="mdl-mini-footer--link-list ">
-                    <li><a href="# ">Example 1</a>
+
+        <div class="footer">
+            <div class="mdl-mini-footer--left-section">
+                <ul class="mdl-mini-footer--link-list">
+                    <li><a href="#">Example 1</a>
                     </li>
-                    <li><a href="# ">Example 2</a>
+                    <li><a href="#">Example 2</a>
                     </li>
-                    <li><a href="# ">Example 3</a>
+                    <li><a href="#">Example 3</a>
                     </li>
                 </ul>
             </div>
-            <div class="mdl-mini-footer--right-section ">
+            <div class="mdl-mini-footer--right-section">
             </div>
         </div>
     </main>
