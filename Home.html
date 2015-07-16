@@ -261,7 +261,21 @@
     </div>
       
     <div class="col-sm-4 " style="background-color:lavenderblush; min-width:30%;">
-        <p><i>Info goes here</i></p><br><br><br><br><br><br><br><br><br><br>
+        </div>
+                                                <form data-ng-controller="progressCtrl ">
+                                                    <div class="mdl-textfield mdl-js-textfield textfield-demo ">
+                                                        <input class="mdl-textfield__input " type="text " class="form-control " data-ng-model="progress " pattern="-?[0-9]*(\.[0-9]+)? " id="sample2 " />
+                                                        <label class="mdl-textfield__label " for="sample2 ">Number...</label>
+                                                        <span class="mdl-textfield__error ">Input is not a number!</span>
+                                                    </div>
+                                                    <div class="progress ">
+                                                        <div class="progress-bar progress-bar-custom " role="progressbar " aria-valuenow="{{progress}} " aria-valuemin="0 " aria-valuemax="100 " style="width: {{progress}}%; ">
+                                                            <span class="sr-only "><br><br>{{progress}}% Complete</span>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
     </div>
   </div>
 </div>
@@ -334,7 +348,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div><!--
         <div class="footer ">
             <div class="mdl-mini-footer--left-section ">
                 <ul class="mdl-mini-footer--link-list ">
@@ -348,7 +362,7 @@
             </div>
             <div class="mdl-mini-footer--right-section ">
             </div>
-        </div>
+        </div>-->
     </main>
 </div>
 
