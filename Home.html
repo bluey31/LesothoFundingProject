@@ -1,4 +1,4 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -14,8 +14,8 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
 <!--OUR CSS FILES-->
-<link rel="stylesheet" media="screen and (max-width: 900px)" href="fullwidth.css"/>
-<link rel="stylesheet" media="screen and (min-width:901px)" href="normalwidth.css"/>
+<link rel="stylesheet" media="screen and (max-width: 766px)" href="fullwidth.css"/>
+<link rel="stylesheet" media="screen and (min-width:767px)" href="normalwidth.css"/>
 <link rel="stylesheet" href="style.css"/>
 
 <html data-ng-app="lesotoApp">
@@ -253,11 +253,17 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-sm-8">
-                                    <div class="mapdiv" style="width: 100%; max-height: 1500px; min-height: calc(50vw - 100px);">
-                                        
-                                    </div>
+                                    <!--<div class="mapdiv" style="width: 100%; max-height: 1500px; min-height: calc(50vw - 100px);">
+                                    </div>-->
+                                    <img src="Assets/world%20in%20color%20and%20outline.png" style="width: 100%; height: auto; border-radius: 4px;">
                                 </div>
                                 <div class="col-sm-4" style="min-width:30%;">
+                                    <div class="textshadowtest">
+                        <div class="internaltitle">
+                            <br>
+                            Progress
+                                        </div>
+                                        </div>
                                     <form data-ng-controller="progressCtrl ">
                                         <div class="mdl-textfield mdl-js-textfield textfield-demo ">
                                             <input class="mdl-textfield__input"  type="text" class="form-control" data-ng-model="progress" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
@@ -266,13 +272,29 @@
                                         </div>
                                         <div class="progress ">
                                             <div class="progress-bar progress-bar-custom " role="progressbar " aria-valuenow="{{progress}} " aria-valuemin="0 " aria-valuemax="100 " style="width: {{progress}}%; ">
-                                                <span class="sr-only "><br><br>{{progress}}% Complete</span>
+                                                <span class="sr-only ">{{progress}}% Complete</span>
 
                                             </div>
                                         </div>
                                     </form>
-                                </div>
+                                
+                                
+                                <p class="alignleft" style="font-size: 2em;">£0</p>
+<p class="alignright"style="font-size: 2em;">£15,000</p>
+
+                                
+                                <div class="eventtitle "style="padding-top: 40px;">
+                                            Event 1:
+                                            </div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                <div class="eventtitle ">
+                                            Event 2:
+                                    </div>
+                                           
+                                    </div>
+                                
                             </div>
+                            
                         </div>
                     </div>
                     <!--<div class="table-responsive ">

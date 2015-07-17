@@ -26,9 +26,11 @@ body {
     margin-left: -5px;
     font-weight: 600;
 }
+.alignright{float:right;}
+.alignleft{float:left;}
 td{}
 .centeralign{text-align: center;}
-.notfooterwrapper {min-height: 75vh;}
+.notfooterwrapper {min-height: 100vh;}
 .padding {
     padding: 25px;
 }
