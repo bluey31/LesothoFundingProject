@@ -1,0 +1,77 @@
+     <!-- START OF CHANGES MADE BY MATT ON THE 19TH OF JULY-->
+     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.red-pink.min.css" /> 
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <!-- ooh fruity -->
+      <div class="layout-transparent mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <div class="mdl-layout__header-row">
+     <style>
+.layout-transparent {
+  background-color: #FF114b;
+}
+.layout-transparent .mdl-layout__header,
+.layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+</style>
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+      <!-- END OF CHANGES MADE BY MATT-->
+        <div class="mdl-layout__drawer">
+        <!--<span class="mdl-layout-title"></span>-->
+        <nav class="mdl-navigation">
+         
+           <form name="form1" method="post" action="http://localhost/checklogin.php">
+            <div class="padding">
+                <p style="font-size: 15pt;margin-bottom:15px;">Login</p>
+                
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                        <input class="mdl-textfield__input" type="text" name="myusername" id="myusername" />
+                        <label class="mdl-textfield__label" for="sample3">Username</label>
+                    </div>
+                
+                
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                        <input class="mdl-textfield__input" type="password" name="mypassword" id="mypassword" />
+                        <label class="mdl-textfield__label" for="sample3">Password</label>
+                    </div>
+                
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <!-- Raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                Clear
+                            </button>
+                        </td>
+                        <td>
+                            <!-- Accent-colored raised button with ripple -->
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" input type="submit" name="Submit" value="Login">
+                                Login
+                         
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+            </form>
+            <a class="mdl-navigation__link" href="About.html">About</a>
+            <!--</span>-->
+        </nav>
+    </div>
