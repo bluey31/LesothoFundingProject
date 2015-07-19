@@ -39,7 +39,8 @@ $_SESSION['mypassword'] = "mypassword";
 //session_register("myusername");
 //session_register("mypassword"); 
 
-header("C:\wamp\www\login_success.php");
+include ("C:\wamp\www\Home_php_addition.html");
+
 }
 else {
 echo "Wrong Username or Password";
