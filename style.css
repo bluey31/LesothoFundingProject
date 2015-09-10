@@ -60,7 +60,7 @@ margin-top: 20px;}
     background-color: #ffffff;
     opacity: 1;
     padding: 30px;
-    border-radius: 3px;
+    border-radius: 4px;
     box-shadow: 0px 4px 22px 3px rgba(0, 0, 0, 0.49);
     margin-bottom: 20px;
     margin-top: 30px;
@@ -117,8 +117,7 @@ margin-top: 20px;}
 .progress {
     background: rgba(245, 245, 245, 1); 
     border: 0px solid rgba(255, 255, 255, 1); 
-    border-radius: 2px; 
-    height: 70px;
+    border-radius: 4px; 
 
 }
 .progress-bar-custom {
