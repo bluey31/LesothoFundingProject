@@ -32,14 +32,14 @@ $count=mysqli_num_rows($result);
 // If result matched $myusername and $mypassword, table row must be 1 row
 if($count==1){
 
-// Register $myusername, $mypassword and redirect to file "login_success.php"
+// Register $myusername, $mypassword and redirect to file "admin.php"
 $_SESSION['myusername'] = "myusername";
 $_SESSION['mypassword'] = "mypassword";
 
 //session_register("myusername");
 //session_register("mypassword"); 
 
-include ("C:\wamp\www\Home_php_addition.html");
+include ("C:\wamp\www\admin.html");
 
 }
 else {
