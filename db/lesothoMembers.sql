@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS `fundingData` (
 -- Dumping data for table `fundingData`
 --
 
-INSERT INTO `fundingData` (`FundingAmount`, `CurrentPlace`, `CurrentDestination`, `EventOne`, `EventTwo`, `EventThree`) VALUES
-(30, 'Lesotho, Africa', 'Egypt, Africa', 'Event 1 example this is it, and can be updated in the admin page', 'Event 2 example this is it, and can be updated in the admin page', 'Event 3 example this is it, and can be updated in the admin page');
+INSERT INTO `fundingData` (`FundingAmount`, `CurrentPlace`,`EventOne`, `EventTwo`, `EventThree`, `id`) VALUES
+(30, 'Lesotho, Africa', 'Event 1 example this is it, and can be updated in the admin page', 'Event 2 example this is it, and can be updated in the admin page', 'Event 3 example this is it, and can be updated in the admin page', 1);
 
 -- --------------------------------------------------------
 

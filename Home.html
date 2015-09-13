@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
 
 <script src="./Scripts/loadFundingData.js"></script>
 
@@ -9,14 +9,16 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
 <!--OUR CSS FILES-->
-<link rel="stylesheet" media="screen and (max-width: 766px)" href="./Style/fullwidth.css"/>
-<link rel="stylesheet" media="screen and (min-width:767px)" href="./Style/normalwidth.css"/>
-<link rel="stylesheet" href="./Style/style.css"/>
+<link rel="stylesheet" media="screen and (max-width: 766px)" href="./Style/fullwidth.css" />
+<link rel="stylesheet" media="screen and (min-width:767px)" href="./Style/normalwidth.css" />
+<link rel="stylesheet" href="./Style/style.css" />
 
 <html>
 <!-- Uses a transparent header that draws on top of the layout's background -->
 <style>
-    /* BOOOTSTRAP STUFF */ .table-condensed>thead>tr>th,
+    /* BOOOTSTRAP STUFF */
+    
+    .table-condensed>thead>tr>th,
     .table-condensed>tbody>tr>th,
     .table-condensed>tfoot>tr>th,
     .table-condensed>thead>tr>td,
@@ -24,7 +26,7 @@
     .table-condensed>tfoot>tr>td {
         padding: 1px;
     }
-
+    
     @-webkit-keyframes progress-bar-stripes {
         from {
             background-position: 40px 0
@@ -33,7 +35,7 @@
             background-position: 0 0
         }
     }
-
+    
     @-o-keyframes progress-bar-stripes {
         from {
             background-position: 40px 0
@@ -42,7 +44,7 @@
             background-position: 0 0
         }
     }
-
+    
     @keyframes progress-bar-stripes {
         from {
             background-position: 40px 0
@@ -51,7 +53,7 @@
             background-position: 0 0
         }
     }
-
+    
     .progress {
         height: 70px;
         margin-top: 10px;
@@ -63,7 +65,7 @@
         -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
         box-shadow: inset 0 2px 5px rgba(0, 0, 0, .1)
     }
-
+    
     .progress-bar {
         float: left;
         width: 0;
@@ -79,7 +81,7 @@
         -o-transition: width .6s ease;
         transition: width .6s ease
     }
-
+    
     .progress-bar-striped,
     .progress-striped .progress-bar {
         background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
@@ -88,92 +90,93 @@
         -webkit-background-size: 40px 40px;
         background-size: 40px 40px
     }
-
+    
     .progress-bar.active,
     .progress.active .progress-bar {
         -webkit-animation: progress-bar-stripes 2s linear infinite;
         -o-animation: progress-bar-stripes 2s linear infinite;
         animation: progress-bar-stripes 2s linear infinite
     }
-
+    
     .progress-bar-success {
         background-color: #5cb85c
     }
-
+    
     .progress-striped .progress-bar-success {
         background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
     }
-
+    
     .progress-bar-info {
         background-color: #5bc0de
     }
-
+    
     .progress-striped .progress-bar-info {
         background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
     }
-
+    
     .progress-bar-warning {
         background-color: #f0ad4e
     }
-
+    
     .progress-striped .progress-bar-warning {
         background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
     }
-
+    
     .progress-bar-danger {
         background-color: #d9534f
     }
-
+    
     .progress-striped .progress-bar-danger {
         background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
         background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent)
     }
-
+    
     .table-responsive {
         overflow-x: auto;
     }
-
+    
     .container {
         min-width: 2000px;
     }
-
+    
     <!--BOOSTRAP ENDS--> .mdl-layout__drawer {
         overflow: hidden;
     }
-
+    
     .material-icons {
         margin-top: 10px;
     }
-
+    
     .layout-transparent {
         background: url('./Assets/LesothoBG.png') center;
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: top;
     }
-
+    
     .mdl-textfield__label {
         width: 180px;
     }
-
+    
     .mdl-textfield__input {
         width: 180px;
     }
-   /* .material-icons {
+    /* .material-icons {
     box-shadow: 0px 4px 30px 3px rgba(0, 0, 0, 0.35);
     }*/
+    
     .layout-transparent .mdl-layout__header,
     .layout-transparent .mdl-layout__drawer-button {
         /* This background is dark, so we set text to white. Use 87% black instead if
      your background is light. */
-    color: white;
+        color: white;
     }
 </style>
 
@@ -192,118 +195,123 @@
 -->
         </div>
     </header>
-<!-- END OF CHANGES MADE BY MATT-->
-<div class="mdl-layout__drawer">
- <!--<span class="mdl-layout-title"></span>-->
- <nav class="mdl-navigation">
+    <!-- END OF CHANGES MADE BY MATT-->
+    <div class="mdl-layout__drawer">
+        <!--<span class="mdl-layout-title"></span>-->
+        <nav class="mdl-navigation">
 
-  <form name="form1" method="post" action="http://localhost/checklogin.php">
-    <div class="padding">
-      <p style="font-size: 15pt;margin-bottom:15px;">Login</p>
+            <form name="form1" method="post" action="http://localhost:8888/db/checklogin.php">
+                <div class="padding">
+                    <p style="font-size: 15pt;margin-bottom:15px;">Login</p>
 
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-          <input class="mdl-textfield__input" type="text" name="myusername" id="myusername" />
-          <label class="mdl-textfield__label" for="sample3">Username</label>
-        </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                        <input class="mdl-textfield__input" type="text" name="myusername" id="myusername" />
+                        <label class="mdl-textfield__label" for="sample3">Username</label>
+                    </div>
 
 
-        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
-          <input class="mdl-textfield__input" type="password" name="mypassword" id="mypassword" />
-          <label class="mdl-textfield__label" for="sample3">Password</label>
-        </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                        <input class="mdl-textfield__input" type="password" name="mypassword" id="mypassword" />
+                        <label class="mdl-textfield__label" for="sample3">Password</label>
+                    </div>
 
-        <table style="width:100%">
-          <tr>
-            <td>
-              <!-- Raised button with ripple -->
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                Clear
-              </button>
-            </td>
-            <td>
-              <!-- Accent-colored raised button with ripple -->
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" input type="submit" name="Submit" value="Login">
-                Login
-              </button>
-            </td>
-          </tr>
-        </table>
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+                                <!-- Raised button with ripple -->
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                    Clear
+                                </button>
+                            </td>
+                            <td>
+                                <!-- Accent-colored raised button with ripple -->
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" input type="submit" name="Submit" value="Login">
+                                    Login
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
 
-      </div>
-    </form>
-    <a class="mdl-navigation__link" href="About.html">About</a>
-    <!--</span>-->
- </nav>
-</div>
-<main class="mdl-layout__content">
-  <div class="notfooterwrapper">
-    <div class="wide">
-      <div class="box">
-        <div class="textshadowtest">
-          <div class="internaltitle">
-            <div class="centeralign">
-              Lesotho to Reading
-            </div>
-          </div>
-        </div>
-
-  <div class="textinsidebox">
-  <!--This portal allows users to see the students from Lesotho's progress from their funding trip from Lesotho to the UK.-->
-    <br><br>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-8">
-            <!--<div class="mapdiv" style="width: 100%; max-height: 1500px; min-height: calc(50vw - 100px);"></div>-->
-            <img src="Assets/world%20in%20color%20and%20outline.png" style="width: 100%; height: auto; border-radius: 4px;">
-          </div>
-
-          <div id="currentPlace"> </div><br>
-          <div id="currentDest"></div><br>
-          <div id="amountFunded"></div>
-
-          <div class="col-sm-4" style="min-width:30%;">
-            <div class="textshadowtest">
-              <div class="internaltitle">
-                <br>
-                Progress
-              </div>
-            </div>
-
-            <form>
-              <div class="mdl-textfield mdl-js-textfield textfield-demo ">
-                <input class="mdl-textfield__input"  type="text" class="form-control" data-ng-model="progress" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
-                <label class="mdl-textfield__label"  for="sample2 "></label>
-                <span class="mdl-textfield__error ">Input is not a number!</span>
-              </div>
-
-              <div class="progress ">
-                <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-                  <span class="sr-only ">30% Complete</span>
                 </div>
-              </div>
             </form>
+            <a class="mdl-navigation__link" href="About.html">About</a>
+            <!--</span>-->
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="notfooterwrapper">
+            <div class="wide">
+                <div class="box">
+                    <div class="textshadowtest">
+                        <div class="internaltitle">
+                            <div class="centeralign">
+                                Lesotho to Reading
+                            </div>
+                        </div>
+                    </div>
 
-            <p class="alignleft" style="font-size: 2em;">£0</p>
-            <p class="alignright"style="font-size: 2em;">£15,000</p>
+                    <div class="textinsidebox">
+                        <!--This portal allows users to see the students from Lesotho's progress from their funding trip from Lesotho to the UK.-->
+                        <br>
+                        <br>
+                        <div class="container-fluid">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col">
+                                    <!--<div class="mapdiv" style="width: 100%; max-height: 1500px; min-height: calc(50vw - 100px);"></div>-->
+                                    <img src="Assets/world%20in%20color%20and%20outline.png" style="width: 100%; height: auto; border-radius: 4px;">
+                                </div>
 
-            <div class="eventtitle "style="padding-top: 40px;">
-              Event 1:
+
+
+                                <div class="mdl-cell mdl-cell--4-col" style="min-width:30%;">
+                                    <div class="textshadowtest">
+                                        <div class="internaltitle">
+                                            <br> Progress
+                                        </div>
+                                    </div>
+
+                                    <form>
+                                        <!--<div class="mdl-textfield mdl-js-textfield textfield-demo ">
+                                            <input class="mdl-textfield__input" type="text" class="form-control" data-ng-model="progress" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+                                            <label class="mdl-textfield__label" for="sample2 "></label>
+                                            <span class="mdl-textfield__error ">Input is not a number!</span>
+                                        </div>-->
+                                        <br>
+                                        <br>
+                                        <div class="centeralign" style="font-size:3em;">
+                                            <div id="amountFunded"></div>
+                                        </div>
+                                        <br>
+                                        <div class="progress">
+                                            <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <p class="alignleft" style="font-size: 2em;">£0</p>
+                                    <p class="alignright" style="font-size: 2em;">£15,000</p>
+                                    <br>
+
+                                    <br>
+                                    <div id="currentPlace" style="font-size: 1.5em;"></div>
+                                    <br>
+                                    <div id="description"></div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eventtitle">Event 1:</div>
+                    <div id="eventOne"></div>
+                    <div class="eventtitle">Event 2:</div>
+                    <div id="eventTwo"></div>
+
+                    <div class="eventtitle">Event 3:</div>
+                    <div id="eventThree"></div>
+
+                </div>
             </div>
-            <div id="eventOne"></div>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <div class="eventtitle">Event 2:</div>
-    <div id="eventTwo"></div>
-
-    <div class="eventtitle">Event 3:</div>
-    <div id="eventThree"></div>
-
-    </div>
-  </div>
-</div>
 </div>
 <!--
         <div class="footer ">
@@ -327,4 +335,5 @@
 
 <script src="http://cdn.pubnub.com/pubnub-3.7.1.min.js"></script>
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+
 </html>
