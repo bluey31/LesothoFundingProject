@@ -19,9 +19,9 @@ xmlhttp.onreadystatechange = function(){
       //Response
       res = '';
       res = retreivedDoc;
-      var fundingData = JSON.parse(res);
+      var fundingdata = JSON.parse(res);
 
-      var amountFunded = fundingData[0].FundingAmount;
+      var amountFunded = fundingdata[0].FundingAmount;
       console.log("Amount Funded: ", amountFunded);
       document.getElementById("amountFunded").innerHTML = "£" + amountFunded;
 
@@ -29,23 +29,23 @@ xmlhttp.onreadystatechange = function(){
       //console.log("Current Destination: ", destCountry);
       //document.getElementById("currentDest").innerHTML = "Current Dest.: " + destCountry;
 
-      var currentCountry = fundingData[0].CurrentPlace;
+      var currentCountry = fundingdata[0].CurrentPlace;
       console.log("Current Country: ", currentCountry);
       document.getElementById("currentPlace").innerHTML = "Current Country: " + currentCountry;
 
-      var description = fundingData[0].Description;
+      var description = fundingdata[0].Description;
       console.log("Descrition: ", description);
       document.getElementById("description").innerHTML = "Description:" + description;
         
-      var eventOne = fundingData[0].EventOne;
+      var eventOne = fundingdata[0].EventOne;
       console.log("Event 1: ", eventOne);
       document.getElementById("eventOne").innerHTML = eventOne;
 
-      var eventTwo = fundingData[0].EventTwo;
+      var eventTwo = fundingdata[0].EventTwo;
       console.log("Event 2: " , eventTwo);
       document.getElementById("eventTwo").innerHTML = eventTwo;
 
-      var eventThree = fundingData[0].EventThree;
+      var eventThree = fundingdata[0].EventThree;
       console.log("Event 3: ", eventThree);
       document.getElementById("eventThree").innerHTML = eventThree;
         
@@ -58,7 +58,7 @@ xmlhttp.onreadystatechange = function(){
 
 //GET requests could return a cached result, so to avoid this we use ?t=" + Math.random() after the url (random id)
 
-var apiURL = "http://localhost:8888/db/service.php";
+var apiURL = "http://localhost:8888/lesothoproject/db/service.php";
 xmlhttp.open("GET", apiURL, true);
 console.log("Retrieving Data from: ", apiURL);
 xmlhttp.send();

@@ -5,7 +5,7 @@ ob_start();
 $host="localhost"; // Host name
 $username=""; // Mysql username
 $password=""; // Mysql password
-$db_name="lesothoMembers"; // Database name
+$db_name="test"; // Database name
 $tbl_name="members"; // Table name
 
 // Connect to server and select databse.
@@ -37,7 +37,7 @@ $_SESSION['mypassword'] = "mypassword";
 //session_register("myusername");
 //session_register("mypassword");
 
-include ("localhost:8888/Lesotho%20Project/admin.html");
+include ("..\admin.html");
 
 }
 else {

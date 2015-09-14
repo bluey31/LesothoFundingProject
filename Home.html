@@ -16,7 +16,41 @@
 
 <html>
 <!-- Uses a transparent header that draws on top of the layout's background -->
-
+<style>
+ .mdl-layout__drawer {
+        overflow: hidden;
+    }
+    
+    .material-icons {
+        margin-top: 10px;
+    }
+    
+    .layout-transparent {
+        background: url('./Assets/LesothoBG.png') center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    
+    .mdl-textfield__label {
+        width: 180px;
+    }
+    
+    .mdl-textfield__input {
+        width: 180px;
+    }
+    /* .material-icons {
+    box-shadow: 0px 4px 30px 3px rgba(0, 0, 0, 0.35);
+    }*/
+    
+    .layout-transparent .mdl-layout__header,
+    .layout-transparent .mdl-layout__drawer-button {
+        /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+        color: white;
+    }
+</style>
+    
 <div class="layout-transparent mdl-layout mdl-js-layout">
     <header class="mdl-layout__header mdl-layout__header--transparent">
         <div class="mdl-layout__header-row">
@@ -37,7 +71,7 @@
         <!--<span class="mdl-layout-title"></span>-->
         <nav class="mdl-navigation">
 
-            <form name="form1" method="post" action="http://localhost:8888/Lesotho%20Project/db/checklogin.php">
+            <form name="form1" method="post" action="http://localhost:8888/LesothoProject/db/checklogin.php">
                 <div class="padding">
                     <p style="font-size: 15pt;margin-bottom:15px;">Login</p>
 
@@ -119,10 +153,15 @@
                                             <div id="amountFunded"></div>
                                         </div>
                                         <br>
-                                        <div class="progress">
-                                            <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-                                            </div>
+                                        <div class="textinsidebox">
+                                            <div id="p1" class="mdl-progress mdl-js-progress" style="width: auto; height: 15px;"></div>
+                                            <script>
+                                                document.querySelector('#p1').addEventListener('mdl-componentupgraded', function () {
+                                                    this.MaterialProgress.setProgress(50);
+                                                });
+                                            </script>
                                         </div>
+                                        <br>
                                     </form>
 
                                     <p class="alignleft" style="font-size: 2em;">£0</p>
@@ -150,21 +189,6 @@
             </div>
         </div>
 </div>
-<!--
-        <div class="footer ">
-            <div class="mdl-mini-footer--left-section ">
-                <ul class="mdl-mini-footer--link-list ">
-                    <li><a href="# ">Example 1</a>
-                    </li>
-                    <li><a href="# ">Example 2</a>
-                    </li>
-                    <li><a href="# ">Example 3</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="mdl-mini-footer--right-section ">
-            </div>
-        </div>-->
 </main>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
