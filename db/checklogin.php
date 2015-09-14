@@ -2,15 +2,15 @@
 <?php
 
 ob_start();
-$host="localhost"; // Host name 
+$host="localhost"; // Host name
 $username=""; // Mysql username
 $password=""; // Mysql password
-$db_name="test"; // Database name
+$db_name="lesothoMembers"; // Database name
 $tbl_name="members"; // Table name
 
 // Connect to server and select databse.
 $dbc = mysqli_connect("$host", "$username", "$password")or die("cannot connect");
-mysqli_select_db($dbc, $db_name)or die("cannot select DB");
+mysqli_select_db($dbc, $db_name) or die("cannot select DB");
 
 // Define $myusername and $mypassword
 $myusername = isset($_POST['myusername']) ? $_POST['myusername'] : '';
@@ -37,11 +37,11 @@ $_SESSION['mypassword'] = "mypassword";
 //session_register("myusername");
 //session_register("mypassword");
 
-include ("C:\wamp\www\admin.html");
+include ("localhost:8888/Lesotho%20Project/admin.html");
 
 }
 else {
-echo "Wrong Username or Password";
+  echo "Wrong Username or Password";
 }
 ob_end_flush();
 ?>
