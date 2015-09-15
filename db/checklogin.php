@@ -3,8 +3,8 @@
 ob_start();
 $host="localhost"; // Host name
 $username="root"; // Mysql username
-$password="abcde"; // Mysql password
-$db_name="lesothoMembers"; // Database name
+$password=""; // Mysql password
+$db_name="test"; // Database name
 $tbl_name="members"; // Table name
 
 // Connect to server and select databse.
@@ -21,18 +21,18 @@ $mypassword = stripslashes($mypassword);
 $myusername = mysqli_real_escape_string($dbc, $myusername);
 $mypassword = mysqli_real_escape_string($dbc,$mypassword);
 $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
-$result=mysqli_query($dbc,$sql);
+$result=mysqli_query($dbc, $sql);
 
 if ($result) {
   //do the deed
-  $row = mysql_fetch_array($result);
+  //$row = mysql_fetch_array($result);
 
   // If result matched $myusername and $mypassword, table row must be 1 row
   // Register $myusername, $mypassword and redirect to file "admin.php"
-  if ($myusername =="14LesothoHighdown09" && $mypassword="14LesothoHighdown09"){
+  if ($myusername =="username" && $mypassword="password"){
     $_SESSION['myusername'] = "myusername";
     $_SESSION['mypassword'] = "mypassword";
-    include ("../admin.html");
+    include ("../views/admin.html");
   }else{
     echo "Wrong Username or Password";
   }

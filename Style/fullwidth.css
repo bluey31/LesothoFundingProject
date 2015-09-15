@@ -1,5 +1,8 @@
-.notfooterwrapper{margin-top: 60px;}
 .wide {
-    margin-left: 0%;
+    margin-left: 40px;
     margin-right: 0%;
+    margin-top: -30px;
 }
+.box { border-radius: 0px; 
+margin-bottom: -40px;}
+.mdl-layout__drawer-button{left: -10px;  }

@@ -3,40 +3,42 @@
 ob_start();
 $host="localhost"; // Host name
 $username="root"; // Mysql username
-$password="abcde"; // Mysql password
-$db_name="lesothoMembers"; // Database name
-$tbl_name="members"; // Table name
-
+$password=""; // Mysql password
+$db_name="test"; // Database name
+$tbl_name="fundingdata"; // Table name
 // Connect to server and select databse.
-$dbc = mysqli_connect("$host", "$username", "$password")or die("cannot connect");
+$dbc = mysqli_connect("$host", "$username", "$password");
+if (!$dbc)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
 mysqli_select_db($dbc, $db_name) or die("cannot select DB");
 
 // Define funding variable
-$fundedAmount = isset($_POST['FundingAmount']) ? $_POST['FundingAmount'] : '';
-$currentLocation = isset($_POST['currentlocation']) ? $_POST['currentlocation'] : '';
-$title1 = isset($_POST['title1']) ? $_POST['title1'] : '';
-$details1 = isset($_POST['details1']) ? $_POST['details1'] : '';
-$title2 = isset($_POST['title2']) ? $_POST['title2'] : '';
-$details1 = isset($_POST['details1']) ? $_POST['details1'] : '';
-$title3 = isset($_POST['title3']) ? $_POST['title3'] : '';
-$title1 = isset($_POST['details3']) ? $_POST['details3'] : '';
+$FundingAmount = isset($_POST['FundingAmount']) ? $_POST['FundingAmount'] : '';
+$CurrentLocation = isset($_POST['CurrentLocation']) ? $_POST['CurrentLocation'] : '';
+$Description = isset($_POST['Description']) ? $_POST['Description'] : '';
+$TitleOne = isset($_POST['TitleOne']) ? $_POST['TitleOne'] : '';
+$EventOne = isset($_POST['EventOne']) ? $_POST['EventOne'] : '';
+$TitleTwo = isset($_POST['TitleTwo']) ? $_POST['TitleTwo'] : '';
+$EventTwo = isset($_POST['EventTwo']) ? $_POST['EventTwo'] : '';
+$TitleThree = isset($_POST['TitleThree']) ? $_POST['TitleThree'] : '';
+$EventThree = isset($_POST['EventThree']) ? $_POST['EventThree'] : '';
 
-// To protect MySQL injection (more detail about MySQL injection)
-$myusername = stripslashes($myusername);
-$mypassword = stripslashes($mypassword);
-$myusername = mysqli_real_escape_string($dbc, $myusername);
-$mypassword = mysqli_real_escape_string($dbc,$mypassword);
-
-$sql="UPDATE $tbl_name SET `FundingAmount` = '$fundedAmount',
-`CurrentPlace` = '$fundedAmount',
-`EventOne` = '$fundedAmount',
-`EventTwo` = '$fundedAmount',
-`EventThree` = '$fundedAmount'";
+$sql="UPDATE $tbl_name SET 
+`FundingAmount` = '$FundingAmount',
+`CurrentLocation` = '$CurrentLocation',
+`Description` = '$Description',
+`EventOne` = '$EventOne',
+`EventTwo` = '$EventTwo',
+`EventThree` = '$EventThree',
+`TitleOne` = '$TitleOne',
+`TitleTwo` = '$TitleTwo',
+`TitleThree` = '$TitleThree' WHERE 'id'=0";
 $result = mysqli_query($dbc,$sql);
+include ("../views/home.html");
+//else {
+  //echo "Wrong Username or Password";
 
-}
-else {
-  echo "Wrong Username or Password";
-}
 ob_end_flush();
 ?>

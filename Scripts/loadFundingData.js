@@ -21,33 +21,44 @@ xmlhttp.onreadystatechange = function(){
       res = retreivedDoc;
       var fundingdata = JSON.parse(res);
 
-      var amountFunded = fundingdata[0].FundingAmount;
-      console.log("Amount Funded: ", amountFunded);
-      document.getElementById("amountFunded").innerHTML = "£" + amountFunded;
+      var FundingAmount = fundingdata[0].FundingAmount;
+      console.log("Amount Funded: ", FundingAmount);
+      document.getElementById("FundingAmount").innerHTML = "£" + FundingAmount;
       document.querySelector('#p1').addEventListener('mdl-componentupgraded', function () {
         //This is to get a correct PERCENTAGE
-          this.MaterialProgress.setProgress(amountFunded/15000);
+          this.MaterialProgress.setProgress((FundingAmount/15000)* 100);
       });
 
-      var currentCountry = fundingdata[0].CurrentPlace;
-      console.log("Current Country: ", currentCountry);
-      document.getElementById("currentPlace").innerHTML = "Current Country: " + currentCountry;
+      var CurrentLocation = fundingdata[0].CurrentLocation;
+      console.log("CurrentLocation: ", CurrentLocation);
+      document.getElementById("CurrentLocation").innerHTML = "Currently in: " + CurrentLocation;
 
-      //var description = fundingdata[0].Description;
-      //console.log("Descrition: ", description);
-      //document.getElementById("description").innerHTML = "Description:" + description;
+      var Description = fundingdata[0].Description;
+      console.log("Description: ", Description);
+      document.getElementById("Description").innerHTML = Description;
 
-      var eventOne = fundingdata[0].EventOne;
-      console.log("Event 1: ", eventOne);
-      document.getElementById("eventOne").innerHTML = eventOne;
+      var EventOne = fundingdata[0].EventOne;
+      console.log("Event 1: ", EventOne);
+      document.getElementById("EventOne").innerHTML = EventOne;
 
-      var eventTwo = fundingdata[0].EventTwo;
-      console.log("Event 2: " , eventTwo);
-      document.getElementById("eventTwo").innerHTML = eventTwo;
+      var EventTwo = fundingdata[0].EventTwo;
+      console.log("Event 2: " , EventTwo);
+      document.getElementById("EventTwo").innerHTML = EventTwo;
 
-      var eventThree = fundingdata[0].EventThree;
-      console.log("Event 3: ", eventThree);
-      document.getElementById("eventThree").innerHTML = eventThree;
+      var EventThree = fundingdata[0].EventThree;
+      console.log("Event 3: ", EventThree);
+      document.getElementById("EventThree").innerHTML =  EventThree;
+        var TitleOne = fundingdata[0].TitleOne;
+      console.log("Title 1: ", TitleOne);
+      document.getElementById("TitleOne").innerHTML = TitleOne;
+
+      var TitleTwo = fundingdata[0].TitleTwo;
+      console.log("title 2: " , TitleTwo);
+      document.getElementById("TitleTwo").innerHTML = TitleTwo;
+
+      var TitleThree = fundingdata[0].TitleThree;
+      console.log("title 3: ", TitleThree);
+      document.getElementById("TitleThree").innerHTML =  TitleThree;
 
       console.log("Retrieved XML successfully");
     }else{

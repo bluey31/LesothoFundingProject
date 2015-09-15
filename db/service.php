@@ -2,8 +2,8 @@
 
 $host="localhost"; // Host name
 $username="root"; // Mysql username
-$password="abcde"; // Mysql password
-$db_name="lesothoMembers"; // Database name
+$password=""; // Mysql password
+$db_name="test"; // Database name
 $tbl_name="fundingData"; // Table name
 
 // Create connection
