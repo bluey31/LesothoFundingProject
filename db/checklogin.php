@@ -1,11 +1,10 @@
-
 <?php
 
 ob_start();
 $host="localhost"; // Host name
-$username=""; // Mysql username
-$password=""; // Mysql password
-$db_name="test"; // Database name
+$username="root"; // Mysql username
+$password="abcde"; // Mysql password
+$db_name="lesothoMembers"; // Database name
 $tbl_name="members"; // Table name
 
 // Connect to server and select databse.
@@ -24,24 +23,22 @@ $mypassword = mysqli_real_escape_string($dbc,$mypassword);
 $sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
 $result=mysqli_query($dbc,$sql);
 
-// Mysql_num_row is counting table row
-$count=mysqli_num_rows($result);
+if ($result) {
+  //do the deed
+  $row = mysql_fetch_array($result);
 
-// If result matched $myusername and $mypassword, table row must be 1 row
-if($count==1){
-
-// Register $myusername, $mypassword and redirect to file "admin.php"
-$_SESSION['myusername'] = "myusername";
-$_SESSION['mypassword'] = "mypassword";
-
-//session_register("myusername");
-//session_register("mypassword");
-
-include ("..\admin.html");
-
+  // If result matched $myusername and $mypassword, table row must be 1 row
+  // Register $myusername, $mypassword and redirect to file "admin.php"
+  if ($myusername =="14LesothoHighdown09" && $mypassword="14LesothoHighdown09"){
+    $_SESSION['myusername'] = "myusername";
+    $_SESSION['mypassword'] = "mypassword";
+    include ("../admin.html");
+  }else{
+    echo "Wrong Username or Password";
+  }
+}else{
+  echo "Internal Error.";
 }
-else {
-  echo "Wrong Username or Password";
-}
+
 ob_end_flush();
 ?>

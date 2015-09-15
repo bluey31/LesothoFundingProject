@@ -2,8 +2,8 @@
 
 ob_start();
 $host="localhost"; // Host name
-$username=""; // Mysql username
-$password=""; // Mysql password
+$username="root"; // Mysql username
+$password="abcde"; // Mysql password
 $db_name="lesothoMembers"; // Database name
 $tbl_name="members"; // Table name
 
@@ -27,7 +27,11 @@ $mypassword = stripslashes($mypassword);
 $myusername = mysqli_real_escape_string($dbc, $myusername);
 $mypassword = mysqli_real_escape_string($dbc,$mypassword);
 
-$sql="SELECT * FROM $tbl_name WHERE username='$myusername' and password='$mypassword'";
+$sql="UPDATE $tbl_name SET `FundingAmount` = '$fundedAmount',
+`CurrentPlace` = '$fundedAmount',
+`EventOne` = '$fundedAmount',
+`EventTwo` = '$fundedAmount',
+`EventThree` = '$fundedAmount'";
 $result = mysqli_query($dbc,$sql);
 
 }
