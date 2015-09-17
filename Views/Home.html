@@ -1,0 +1,142 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.grey-blue.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="../Style/style.css" />
+<link rel="stylesheet" media="screen and (max-width: 839px)" href="../Style/fullwidth.css" />
+<link rel="stylesheet" media="screen and (min-width:840px)" href="../Style/normalwidth.css" />
+
+<script src="../Scripts/loadFundingData.js"></script>
+<style>
+    .mdl-layout__drawer {
+        overflow: hidden;
+    }
+    
+    .material-icons {
+        margin-top: 10px;
+    }
+    
+    .layout-transparent {
+        background: url('../Assets/LesothoBG.png') center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    
+    .mdl-textfield__label {
+        width: 180px;
+    }
+    
+    .mdl-textfield__input {
+        width: 180px;
+    }
+    
+    .layout-transparent .mdl-layout__header,
+    .layout-transparent .mdl-layout__drawer-button {
+        color: white;
+    }
+</style>
+<div class="layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Lesotho Funding Project</span>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <nav class="mdl-navigation">
+            <form name="form1" method="post" action="../db/checklogin.php">
+                <div class="padding">
+                    <p style="font-size: 15pt;margin-bottom:15px;">Login</p>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                        <input class="mdl-textfield__input" type="text" name="myusername" id="myusername" />
+                        <label class="mdl-textfield__label" for="sample3">Username</label>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+                        <input class="mdl-textfield__input" type="password" name="mypassword" id="mypassword" />
+                        <label class="mdl-textfield__label" for="sample3">Password</label>
+                    </div>
+                    <table style="width:100%">
+                        <tr>
+                            <td>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect" input type="submit" name="Submit" value="Login" style="width: 80%;">
+                                    Login
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="wide">
+            <div class="box">
+                <div class="textshadowtest">
+                    <div class="internaltitle">
+                        <div class="centeralign">
+                            Lesotho to Reading
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="textinsidebox">-->
+                <br>
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--8-col">
+                        <img src="../Assets/world%20in%20color%20and%20outline.png" style="width: 100%; height: auto; border-radius: 4px;">
+                    </div>
+
+                    <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+                        <div class="textshadowtest">
+                            <div class="internaltitle">
+                                <br> Progress
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="centeralign" style="font-size:3em;">
+                            <div id="FundingAmount"></div>
+                        </div>
+                        <br>
+                        <div class="textinsidebox">
+                            <div id="p1" class="mdl-progress mdl-js-progress" style="width: auto; height: 45px;"></div>
+                        </div>
+
+                        <p class="alignleft" style="font-size: 1em;">£0</p>
+                        <p class="alignright" style="font-size: 1em;">£15,000</p>
+                        <br>
+
+                        <br>
+                        <div id="CurrentLocation" style="font-size: 1.5em;"></div>
+                        <br>
+                        <div id="Description"></div>
+                    </div>
+                </div>
+                <div class="eventtitle">
+                    <div id="TitleOne"></div>
+                </div>
+                <div id="EventOne"></div>
+                <br>
+                <div class="eventtitle">
+                    <div id="TitleTwo"></div>
+                </div>
+                <div id="EventTwo"></div>
+                <br>
+                <div class="eventtitle">
+                    <div id="TitleThree"></div>
+                </div>
+                <div id="EventThree"></div>
+                <br>
+            </div>
+        </div>
+        <!--</div>-->
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://cdn.pubnub.com/pubnub-3.7.1.min.js"></script>
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+</div>
+
+</html>

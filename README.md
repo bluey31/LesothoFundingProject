@@ -1,2 +1,2 @@
-# Lesoto Funding Project
-A platform to provide Lesoto students' fundraising an ease of tracking
+# Lesotho Funding Project
+A platform to provide Lesotho students' fundraising an ease of tracking
