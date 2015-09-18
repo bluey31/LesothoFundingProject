@@ -32,7 +32,7 @@ if ($result) {
   if ($myusername =="username" && $mypassword="password"){
     $_SESSION['myusername'] = "myusername";
     $_SESSION['mypassword'] = "mypassword";
-    include ("../views/admin.html");
+    header ("Location: ../views/admin.html");
   }else{
     echo "Wrong Username or Password";
   }
