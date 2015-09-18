@@ -25,18 +25,41 @@ $EventTwo = isset($_POST['EventTwo']) ? $_POST['EventTwo'] : '';
 $TitleThree = isset($_POST['TitleThree']) ? $_POST['TitleThree'] : '';
 $EventThree = isset($_POST['EventThree']) ? $_POST['EventThree'] : '';
 
-$sql="UPDATE $tbl_name SET 
-`FundingAmount` = '$FundingAmount',
-`CurrentLocation` = '$CurrentLocation',
-`Description` = '$Description',
-`EventOne` = '$EventOne',
-`EventTwo` = '$EventTwo',
-`EventThree` = '$EventThree',
-`TitleOne` = '$TitleOne',
-`TitleTwo` = '$TitleTwo',
-`TitleThree` = '$TitleThree' WHERE 'id'=0";
+$sql = "UPDATE $tbl_name SET ";
+
+if ($FundingAmount != ""){
+  $sql = $sql . "FundingAmount = '$FundingAmount', ";
+}
+if ($CurrentLocation != "") {
+  $sql = $sql . "CurrentLocation = '$CurrentLocation', ";
+}
+if ($Description != "") {
+  $sql = $sql . "Description = '$Description', ";
+}
+if ($EventOne != ""){
+  $sql = $sql . "EventOne = '$EventOne', ";
+}
+if ($EventTwo != ""){
+  $sql = $sql . "EventTwo = '$EventTwo', ";
+}
+if ($EventThree != ""){
+  $sql = $sql . "EventThree = '$EventThree', ";
+}
+if ($TitleOne != ""){
+  $sql = $sql . "TitleOne = '$TitleOne', ";
+}
+if ($TitleTwo != ""){
+  $sql = $sql . "TitleTwo = '$TitleTwo', ";
+}
+if($TitleThree != ""){
+  $sql = $sql . "TitleThree = '$TitleThree', ";
+}
+$sql .= "ID = '0'
+WHERE ID=0;";
+
 $result = mysqli_query($dbc,$sql);
-include ("../views/home.html");
+
+header ("Location: ../views/home.html");
 //else {
   //echo "Wrong Username or Password";
 
